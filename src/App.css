@@ -1,7 +1,31 @@
+#root,
+** {
+  margin: 0 auto;
+  padding: 0;
+}
+
 #root {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
   text-align: center;
 }
 
