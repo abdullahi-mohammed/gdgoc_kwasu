@@ -73,7 +73,7 @@ function EventDetails() {
                     <MapPin className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Venue:</p>
-                        <p>FET Engineering AUD Kwara State University, Malete Kwara State</p>
+                        <p>FET Engineering AUD Kwara State University, Malete, Kwara State.</p>
                     </div>
                 </div>
 
