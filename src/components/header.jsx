@@ -1,6 +1,7 @@
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiOutlineLinkedin } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -38,9 +39,9 @@ export default function Header() {
                 {/* Bottom Row: Navigation Links */}
                 <div className="bg-gray-50">
                     <div className="container mx-auto px-4 py-3 flex space-x-6 justify-center text-sm sm:text-base font-medium">
-                        <a href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-                        <a href="/get-dp" className="text-gray-700 hover:text-blue-600 transition-colors">Get DP</a>
-                        <a href="/sponsors" className="text-gray-700 hover:text-blue-600 transition-colors">Sponsors</a>
+                        <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
+                        <Link to="/get-dp" className="text-gray-700 hover:text-blue-600 transition-colors">Get DP</Link>
+                        <Link to="/sponsors" className="text-gray-700 hover:text-blue-600 transition-colors">Sponsors</Link>
                     </div>
                 </div>
             </nav>
