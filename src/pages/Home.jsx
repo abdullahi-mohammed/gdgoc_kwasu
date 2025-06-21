@@ -57,7 +57,7 @@ function EventDetails() {
                     <Calendar className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Date:</p>
-                        <p>June 28–30, 2024</p>
+                        <p>June 28, 2025</p>
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@ function EventDetails() {
                     <Clock className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Time:</p>
-                        <p>10:00 AM – 5:00 PM daily</p>
+                        <p>10:00 AM – 5:00 PM</p>
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@ function EventDetails() {
                     <MapPin className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Venue:</p>
-                        <p>KWASU Innovation Hub, Malete Campus</p>
+                        <p>FET Engineering AUD Kwara State University, Malete Kwara State</p>
                     </div>
                 </div>
 
