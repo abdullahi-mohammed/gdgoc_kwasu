@@ -164,6 +164,16 @@ export default function CountdownFlip() {
                     </p>
                 </div>
 
+                <div className="text-center mb-8">
+                    {isExpired ? (
+                        <div className="flex items-center justify-center gap-2 text-2xl font-bold text-red-600 dark:text-red-400">
+                            <Clock className="w-6 h-6" /> Event has started!
+                        </div>
+                    ) :
+                        <div className="text-lg text-gray-700 dark:text-gray-300">Time remaining until the event</div>
+                    }
+                </div>
+
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12">
                     <FlipCard value={timeLeft.days} label="Days" previousValue={previousTime.days} />
                     <FlipCard value={timeLeft.hours} label="Hours" previousValue={previousTime.hours} />
@@ -171,22 +181,14 @@ export default function CountdownFlip() {
                     <FlipCard value={timeLeft.seconds} label="Seconds" previousValue={previousTime.seconds} />
                 </div>
 
-                <div className="text-center mb-8">
-                    {isExpired ? (
-                        <div className="flex items-center justify-center gap-2 text-2xl font-bold text-red-600 dark:text-red-400">
-                            <Clock className="w-6 h-6" /> Event has started!
-                        </div>
-                    ) : (
-                        <div className="text-lg text-gray-700 dark:text-gray-300">Time remaining until the event</div>
-                    )}
-                </div>
 
-                <div className="flex flex-wrap justify-center gap-3 mb-12">
+
+                {/* <div className="flex flex-wrap justify-center gap-3 mb-12">
                     <Button onClick={() => setNewDate(1)}>1 Day</Button>
                     <Button onClick={() => setNewDate(7)}>1 Week</Button>
                     <Button onClick={() => setNewDate(30)}>1 Month</Button>
                     <Button onClick={() => setNewDate(365)}>1 Year</Button>
-                </div>
+                </div> */}
 
                 <EventDetails />
 
