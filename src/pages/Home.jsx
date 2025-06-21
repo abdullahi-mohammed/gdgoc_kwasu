@@ -50,7 +50,7 @@ function EventDetails() {
         <Card className="p-6 mb-8 bg-white/90 dark:bg-gray-800/80 backdrop-blur-sm border-2">
             <div className="space-y-5">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-                    Build with AI KWASU 2024
+                    Build with AI KWASU 2025
                 </h2>
 
                 <div className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
