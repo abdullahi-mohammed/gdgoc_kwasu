@@ -108,7 +108,7 @@ export default function CountdownFlip() {
     const [previousTime, setPreviousTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
     const [targetDate, setTargetDate] = useState(() => {
         const date = new Date()
-        date.setDate(date.getDate() + 30)
+        date.setDate(date.getDate() + 7)
         return date
     })
 
