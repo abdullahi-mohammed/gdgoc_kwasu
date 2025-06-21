@@ -3,7 +3,9 @@ import Hero from '../../components/hero'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
-import frameImg from '../../../public/gdguifrme.png' // adjust path as needed
+// import frameImg from '/buildwithaiframe.jpg' // adjust path as needed
+import frameImg from '../../assets/buildwithaiframe.jpg' // adjust path as needed
+import ShareButtons from '../../components/ShareButtons'
 
 const CANVAS_SIZE = 600 // square canvas
 
@@ -13,44 +15,54 @@ const GetDp = () => {
     const [downloadUrl, setDownloadUrl] = useState(null)
     const canvasRef = useRef(null)
     const frameRef = useRef(new Image())
+    console.log(frameImg, 'frame 1', frameRef);
+    const [frameLoaded, setFrameLoaded] = useState(false)
+
+    const drawFrameOnly = () => {
+        const canvas = canvasRef.current
+        const ctx = canvas.getContext('2d')
+        ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE)
+        ctx.drawImage(frameRef.current, 0, 0, CANVAS_SIZE, CANVAS_SIZE)
+    }
+
 
     // Load frame image
     useEffect(() => {
-        frameRef.current.src = frameImg
+        const img = new Image()
+        img.src = frameImg
+        img.onload = () => {
+            drawFrameOnly() // Draw frame only on initial load
+            frameRef.current = img
+            setFrameLoaded(true)
+        }
     }, [])
-
     // Redraw canvas when image or name changes
+
     useEffect(() => {
-        if (!imageSrc) return
+        // if (imageSrc || frameLoaded) return
 
         const canvas = canvasRef.current
         const ctx = canvas.getContext('2d')
-
         const userImage = new Image()
+
         userImage.onload = () => {
-            // Clear canvas
             ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE)
-
-            // Draw uploaded image (fit it into square canvas)
-            ctx.drawImage(userImage, 0, 0, CANVAS_SIZE, CANVAS_SIZE)
-
-            // Draw frame
             ctx.drawImage(frameRef.current, 0, 0, CANVAS_SIZE, CANVAS_SIZE)
+            ctx.drawImage(userImage, 370, 100, CANVAS_SIZE / 3, CANVAS_SIZE / 3)
 
-            // Add name
+
             if (name) {
                 ctx.font = 'bold 28px sans-serif'
                 ctx.fillStyle = 'red'
                 ctx.textAlign = 'center'
-                ctx.fillText(name, CANVAS_SIZE / 2, CANVAS_SIZE - 30)
+                ctx.fillText(name, 500, 385)
             }
 
-            // Set download URL
-            const url = canvas.toDataURL('image/png')
-            setDownloadUrl(url)
+            setDownloadUrl(canvas.toDataURL('image/png'))
         }
+
         userImage.src = imageSrc
-    }, [imageSrc, name])
+    }, [imageSrc, name, frameLoaded])
 
     const handleImageUpload = (e) => {
         const file = e.target.files?.[0]
@@ -72,9 +84,9 @@ const GetDp = () => {
                     Get Your Official BuildWithAI KWASU 2025 DP
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <div className="flex flex-col-reverse lg:flex-row gap-10 items-center lg:items-start">
                     {/* Form */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 w-full max-w-md">
                         <div>
                             <Label htmlFor="name">Your Full Name</Label>
                             <Input
@@ -82,8 +94,13 @@ const GetDp = () => {
                                 placeholder="e.g. Sarah Adeola"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
+                                maxLength={20} // ⬅️ Limit to 20 characters (adjust as needed)
                             />
+                            <p className="text-sm text-gray-500 mt-1">
+                                {name.length}/{20} characters
+                            </p>
                         </div>
+
 
                         <div>
                             <Label htmlFor="photo">Profile Photo</Label>
@@ -105,28 +122,32 @@ const GetDp = () => {
                                 onChange={handleImageUpload}
                             />
                         </div>
+                        {downloadUrl && <ShareButtons downloadUrl={downloadUrl} />}
 
-                        {downloadUrl && (
+                        {/* {downloadUrl && (
                             <a
+
                                 href={downloadUrl}
                                 download="buildwithai-dp.png"
                                 className="inline-block px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition"
                             >
                                 Download My DP
                             </a>
-                        )}
+                        )} */}
                     </div>
 
                     {/* Canvas Preview */}
-                    <div className="w-full flex justify-center">
+                    <div className=" flex justify-center">
+                        {/* {frameLoaded && (<img src={frameImg} />)} */}
                         <canvas
                             ref={canvasRef}
                             width={CANVAS_SIZE}
                             height={CANVAS_SIZE}
-                            className="border rounded shadow"
+                            className="border rounded shadow w-full max-w-[600px]"
                         />
                     </div>
                 </div>
+
             </div>
         </main>
     )
