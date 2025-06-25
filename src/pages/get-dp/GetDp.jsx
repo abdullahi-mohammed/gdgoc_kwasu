@@ -4,10 +4,10 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 // import frameImg from '/buildwithaiframe.jpg' // adjust path as needed
-import frameImg from '/buildwithaiframe.jpg' // adjust path as needed
+import frameImg from '../../assets/Subtract (2).png' // adjust path as needed
 import ShareButtons from '../../components/ShareButtons'
 
-const CANVAS_SIZE = 600 // square canvas
+const CANVAS_SIZE = 900 // square canvas
 
 const GetDp = () => {
     const [name, setName] = useState('')
@@ -39,30 +39,63 @@ const GetDp = () => {
     // Redraw canvas when image or name changes
 
     useEffect(() => {
-        // if (imageSrc || frameLoaded) return
-
-        const canvas = canvasRef.current
-        const ctx = canvas.getContext('2d')
-        const userImage = new Image()
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext('2d');
+        const userImage = new Image();
 
         userImage.onload = () => {
-            ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE)
-            ctx.drawImage(frameRef.current, 0, 0, CANVAS_SIZE, CANVAS_SIZE)
-            ctx.drawImage(userImage, 370, 100, CANVAS_SIZE / 3, CANVAS_SIZE / 3)
+            ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 
+            // Frame cutout configuration
+            const CUTOUT_X = 520;
+            const CUTOUT_Y = 160;
+            const CUTOUT_WIDTH = 357;  // You must confirm this
+            const CUTOUT_HEIGHT = 353; // You must confirm this
 
-            if (name) {
-                ctx.font = 'bold 28px sans-serif'
-                ctx.fillStyle = 'red'
-                ctx.textAlign = 'center'
-                ctx.fillText(name, 500, 385)
+            // Resize user image proportionally to fit inside the cutout
+            const imgWidth = userImage.width;
+            const imgHeight = userImage.height;
+            const cutoutRatio = CUTOUT_WIDTH / CUTOUT_HEIGHT;
+            const imgRatio = imgWidth / imgHeight;
+
+            let drawWidth, drawHeight;
+
+            if (imgRatio > cutoutRatio) {
+                // Image is wider: fit by height
+                drawHeight = CUTOUT_HEIGHT;
+                drawWidth = imgWidth * (CUTOUT_HEIGHT / imgHeight);
+            } else {
+                // Image is taller: fit by width
+                drawWidth = CUTOUT_WIDTH;
+                drawHeight = imgHeight * (CUTOUT_WIDTH / imgWidth);
             }
 
-            setDownloadUrl(canvas.toDataURL('image/png'))
-        }
+            // Center image inside cutout
+            const drawX = CUTOUT_X - (drawWidth - CUTOUT_WIDTH) / 2;
+            const drawY = CUTOUT_Y - (drawHeight - CUTOUT_HEIGHT) / 2;
 
-        userImage.src = imageSrc
-    }, [imageSrc, name, frameLoaded])
+            ctx.drawImage(userImage, drawX, drawY, drawWidth, drawHeight);
+
+            // Draw frame on top
+            ctx.drawImage(frameRef.current, 0, 0, CANVAS_SIZE, CANVAS_SIZE);
+
+            // Draw name if available
+            if (name) {
+                ctx.font = 'bold 28px sans-serif';
+                ctx.fillStyle = 'black';
+                ctx.textAlign = 'center';
+                ctx.fillText(name, 695, 570); // You can adjust Y here
+            }
+
+            // Create downloadable image
+            setDownloadUrl(canvas.toDataURL('image/png'));
+        };
+
+        if (imageSrc) {
+            userImage.src = imageSrc;
+        }
+    }, [imageSrc, name, frameLoaded, frameRef]);
+
 
     const handleImageUpload = (e) => {
         const file = e.target.files?.[0]
