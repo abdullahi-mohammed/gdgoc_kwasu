@@ -152,11 +152,11 @@ export default function CountdownFlip() {
                 {/* Header */}
                 <div className="text-center mb-8">
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <Gift className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                        {/* <Gift className="w-8 h-8 text-purple-600 dark:text-purple-400" /> */}
                         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                             Countdown to Build with AI KWASU
                         </h1>
-                        <Calendar className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                        {/* <Calendar className="w-8 h-8 text-blue-600 dark:text-blue-400" /> */}
                     </div>
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         Join hundreds of students and developers as we build the future with Artificial Intelligence
