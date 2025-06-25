@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Calendar, Clock, Gift, MapPin, Edit3, Check, X, Image, Handshake } from "lucide-react"
 import { Laptop, Info } from "lucide-react"
+import { Link } from "react-router-dom";
+
 
 function FlipCard({ value, label, previousValue }) {
     const [isFlipping, setIsFlipping] = useState(false)
@@ -184,24 +186,26 @@ export default function CountdownFlip() {
                     <FlipCard value={timeLeft.seconds} label="Seconds" previousValue={previousTime.seconds} />
                 </div>
 
-                {/* Event Details */}
-                <EventDetails />
-
                 {/* CTA Buttons */}
-                <div className="text-center space-y-6 mt-12">
+                <div className="text-center space-y-6 mt-12 mb-12">
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Be Part of the Experience</h3>
                     <p className="text-gray-600 dark:text-gray-300">
                         Customize your profile, show your support, or join us as a sponsor.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-                            <Image className="w-4 h-4 mr-2" /> Get My DP
+                            <Image className="w-4 h-4 mr-2" /> <Link to='/get-dp' >Get My DP</Link>
                         </Button>
                         <Button variant="outline">
                             <Handshake className="w-4 h-4 mr-2" /> View Sponsors
                         </Button>
                     </div>
                 </div>
+
+                {/* Event Details */}
+                <EventDetails />
+
+
             </div>
 
             {/* Flip animation styles */}
