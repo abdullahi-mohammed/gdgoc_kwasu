@@ -186,6 +186,15 @@ export default function CountdownFlip() {
                     <FlipCard value={timeLeft.seconds} label="Seconds" previousValue={previousTime.seconds} />
                 </div>
 
+                <a
+                    href="https://gdg.community.dev/e/m4hfy3/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-sm text-blue-600 underline hover:text-blue-800"
+                >
+                    📅 RSVP for the Build With AI KWASU event
+                </a>
+
                 {/* CTA Buttons */}
                 <div className="text-center space-y-6 mt-12 mb-12">
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Be Part of the Experience</h3>

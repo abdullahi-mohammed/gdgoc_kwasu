@@ -151,7 +151,7 @@ const GetDp = () => {
                             <Input
                                 id="photo"
                                 type="file"
-                                accept="image/*"
+                                accept="image/*, .jpeg, .png, .heic, .heif"
                                 onChange={handleImageUpload}
                             />
                         </div>

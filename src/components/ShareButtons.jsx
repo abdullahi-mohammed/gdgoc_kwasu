@@ -1,5 +1,5 @@
 // components/ShareButtons.jsx
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 
 /**
@@ -10,10 +10,25 @@ import { Button } from '@/components/ui/button'
  * - imageUrl: optional Cloudinary/public URL (used for sharing)
  */
 const ShareButtons = ({ downloadUrl, imageUrl }) => {
+    const [copied, setCopied] = useState(false);
+
     const siteUrl = 'https://gdgoc-kwasu.vercel.app/' // replace with your actual URL
 
     const shareLink = imageUrl || siteUrl // Prefer image URL if available
-    const message = `🔥 I just created my BuildWithAI KWASU DP! Check it out 👉 ${shareLink} #BuildWithAI #KWASU #GDSC`
+    const message = `🔥 I just created my BuildWithAI KWASU DP! Check it out 👉 ${shareLink}.  📅 RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+     #BuildWithAI #KWASU #GDGo_CKWASU`
+    const igMmessage = `🔥 I just created my BuildWithAI @gdgoc_kwasu KWASU DP! Check it out 👉 ${shareLink}.  RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+     #BuildWithAI #KWASU #GDGo_CKWASU`
+    const xMessage = `🔥 I just created my BuildWithAI @gdgoC_Kwasu KWASU DP! Check it out 👉 ${shareLink}.  RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+     #BuildWithAI #KWASU #GDGo_CKWASU`
+
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(igMmessage).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
+    };
 
     const handleNativeShare = async () => {
         if (navigator.share) {
@@ -65,7 +80,7 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
 
                 {/* Twitter */}
                 <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(xMessage)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
@@ -93,10 +108,23 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
             </div>
 
             {/* Instagram note */}
-            <p className="text-sm text-gray-500 max-w-md mx-auto">
+            <div className="text-center space-y-2">
+                <p className="text-sm text-gray-500 max-w-md mx-auto">
+                    📸 To post on Instagram, please download and upload manually. Tag <strong>@gdg_kwasu</strong> and use
+                    <strong> #BuildWithAI</strong>, <strong>#KWASU</strong>.
+                </p>
+
+                <button
+                    onClick={handleCopy}
+                    className="px-4 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+                >
+                    {copied ? "Caption Copied ✅" : "Copy Instagram Caption"}
+                </button>
+            </div>
+            {/* <p className="text-sm text-gray-500 max-w-md mx-auto">
                 📸 To post on Instagram, please download and upload manually. Tag <strong>@gdg_kwasu</strong> and use
                 <strong> #BuildWithAI</strong>, <strong>#KWASU</strong>.
-            </p>
+            </p> */}
         </div>
     )
 }
