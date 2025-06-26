@@ -15,12 +15,18 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
     const siteUrl = 'https://gdgoc-kwasu.vercel.app/' // replace with your actual URL
 
     const shareLink = imageUrl || siteUrl // Prefer image URL if available
-    const message = `🔥 I just created my BuildWithAI KWASU DP! Check it out 👉 ${shareLink}.  📅 RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
-     #BuildWithAI #KWASU #GDGo_CKWASU`
-    const igMmessage = `🔥 I just created my BuildWithAI @gdgoc_kwasu KWASU DP! Check it out 👉 ${shareLink}.  RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
-     #BuildWithAI #KWASU #GDGo_CKWASU`
-    const xMessage = `🔥 I just created my BuildWithAI @gdgoC_Kwasu KWASU DP! Check it out 👉 ${shareLink}.  RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
-     #BuildWithAI #KWASU #GDGo_CKWASU`
+    const message = `🔥 I just created my BuildWithAI KWASU DP! Check it out 👉 ${shareLink}.
+    📅 RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+    
+    #BuildWithAI #KWASU #GDGo_CKWASU`
+    const igMmessage = `🔥 I just created my BuildWithAI @gdgoc_kwasu KWASU DP! Check it out 👉 ${shareLink}.
+    RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+    
+    #BuildWithAI #KWASU #GDGo_CKWASU`
+    const xMessage = `🔥 I just created my BuildWithAI @gdgoC_Kwasu KWASU DP! Check it out 👉 ${shareLink}.
+    RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+    
+    #BuildWithAI #KWASU #GDGo_CKWASU`
 
 
     const handleCopy = () => {
