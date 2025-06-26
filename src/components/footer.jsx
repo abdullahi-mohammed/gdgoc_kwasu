@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-center space-x-6 mt-4 text-sm font-medium">
                 <a
-                    href="https://twitter.com/YourGDGHandle"
+                    href="https://x.com/techie_devv"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline"
@@ -35,7 +35,7 @@ const Footer = () => {
                     GitHub
                 </a>
                 <a
-                    href="mailto:techteam@gdgkwasu.com"
+                    href="mailto:abdullahimohammed3108@gmail.com"
                     className="text-green-600 hover:underline"
                 >
                     Contact Us
