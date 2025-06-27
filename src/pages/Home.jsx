@@ -67,9 +67,10 @@ function EventDetails() {
                     <Clock className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Time:</p>
-                        <p>10:00 AM – 5:00 PM</p>
+                        <p>8:00 AM – 1:00 PM</p>
                     </div>
                 </div>
+
 
                 <div className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
                     <MapPin className="w-5 h-5 mt-1" />
@@ -112,7 +113,7 @@ function EventDetails() {
 // import { Button } from "@/components/ui/button"; // adjust import if different
 
 export default function CountdownFlip() {
-    const EVENT_DATE_STRING = '2025-06-28T07:00:00'; // 🎯 Your fixed event datetime
+    const EVENT_DATE_STRING = '2025-06-28T08:00:00'; // 🎯 Your fixed event datetime
     const eventDate = new Date(EVENT_DATE_STRING);
 
     const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(eventDate));
