@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="bg-white text-gray-800 py-6 px-4 text-center border-t border-gray-200">
             <div className="mb-3">
                 <p className="text-sm font-medium">
-                    Built with 💻, ☕, and community spirit by the Technical Team —
+                    By the Technical Team —
                     <span className="font-bold ml-1">
                         <span className="text-blue-600">G</span>
                         <span className="text-red-600">D</span>
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-center space-x-6 mt-4 text-sm font-medium">
                 <a
-                    href="https://x.com/techie_devv"
+                    href="https://x.com/gdgoC_Kwasu"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline"
@@ -30,7 +30,7 @@ const Footer = () => {
                     href="https://github.com/abdullahi-mohammed/gdgoc_kwasu"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-800 hover:underline"
+                    className="text-yellow-500 hover:underline"
                 >
                     GitHub
                 </a>

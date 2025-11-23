@@ -52,14 +52,14 @@ function EventDetails() {
         <Card className="p-6 mb-8 bg-white/90 dark:bg-gray-800/80 backdrop-blur-sm border-2">
             <div className="space-y-5">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-                    Build with AI KWASU 2025
+                    TechFest25 KWASU
                 </h2>
 
                 <div className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
                     <Calendar className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Date:</p>
-                        <p>June 28, 2025</p>
+                        <p>November 29, 2025</p>
                     </div>
                 </div>
 
@@ -67,7 +67,7 @@ function EventDetails() {
                     <Clock className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Time:</p>
-                        <p>8:00 AM – 1:00 PM</p>
+                        <p>8:00 AM – 2:00 PM</p>
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@ function EventDetails() {
                     <MapPin className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Venue:</p>
-                        <p>FET Engineering AUD Kwara State University, Malete, Kwara State.</p>
+                        <p>Convocation Arena (CVA) Kwara State University, Malete, Kwara State.</p>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@ function EventDetails() {
                         <ul className="list-disc ml-5">
                             <li>Laptop & charger</li>
                             <li>Notebook & pen</li>
-                            <li>Valid school/work ID card</li>
+                            {/* <li>Valid school/work ID card</li> */}
                             <li>Curiosity and a passion for tech!</li>
                         </ul>
                     </div>
@@ -97,7 +97,7 @@ function EventDetails() {
                     <Info className="w-5 h-5 mt-1" />
                     <div>
                         <p className="font-medium">Note:</p>
-                        <p>There will be hands-on AI workshops, networking, free swags, and certification for participants.</p>
+                        <p>There will be a mix of tech exhibitions, workshops, panel discussions, games, live music sessions, networking and free swags.</p>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@ function EventDetails() {
 // import { Button } from "@/components/ui/button"; // adjust import if different
 
 export default function CountdownFlip() {
-    const EVENT_DATE_STRING = '2025-06-28T08:00:00'; // 🎯 Your fixed event datetime
+    const EVENT_DATE_STRING = '2025-11-29T08:00:00'; // 🎯 Your fixed event datetime
     const eventDate = new Date(EVENT_DATE_STRING);
 
     const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(eventDate));
@@ -157,12 +157,12 @@ export default function CountdownFlip() {
                     <div className="flex items-center justify-center gap-3 mb-4">
                         {/* <Gift className="w-8 h-8 text-purple-600 dark:text-purple-400" /> */}
                         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                            Countdown to Build with AI KWASU
+                            Countdown to TechFest25
                         </h1>
                         {/* <Calendar className="w-8 h-8 text-blue-600 dark:text-blue-400" /> */}
                     </div>
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                        Join hundreds of students and developers as we build the future with Artificial Intelligence
+                        TechFest25 is a movement to spark the next generation of innovators, showcase campus talent and foster real-world collaboration between students, startups and industry leaders.
                     </p>
                 </div>
 
@@ -193,18 +193,21 @@ export default function CountdownFlip() {
                     rel="noopener noreferrer"
                     className="inline-block mt-4 text-sm text-blue-600 underline hover:text-blue-800"
                 >
-                    📅 RSVP for the Build With AI KWASU event
+                    📅 RSVP for the TechFest25 event
                 </a>
 
                 {/* CTA Buttons */}
-                <div className="text-center space-y-6 mt-12 mb-12">
+                <div className="text-center space-y-6 mt-10 mb-10">
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Be Part of the Experience</h3>
                     <p className="text-gray-600 dark:text-gray-300">
                         Customize your profile, show your support, or join us as a sponsor.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <Button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-                            <Image className="w-4 h-4 mr-2" /> <Link to='/get-dp' >Get My DP</Link>
+                        <Button variant="outline">
+                            <Image className="w-4 h-4 mr-2 text-green-600" /> 
+                            <Link to='/get-dp'>
+                            <span className="text-blue-600">Get</span> <span className="text-red-600">My</span> <span className="text-yellow-500">DP</span> 
+                            </Link>
                         </Button>
                         <Button variant="outline">
                             <Handshake className="w-4 h-4 mr-2" /> View Sponsors

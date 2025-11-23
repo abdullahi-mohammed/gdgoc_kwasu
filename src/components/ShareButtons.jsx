@@ -15,18 +15,18 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
     const siteUrl = 'https://gdgoc-kwasu.vercel.app/' // replace with your actual URL
 
     const shareLink = imageUrl || siteUrl // Prefer image URL if available
-    const message = `🔥 I just created my BuildWithAI KWASU DP! Check it out 👉 ${shareLink}.
+    const message = `🔥 I just created my TechFest25 KWASU DP! Check it out 👉 ${shareLink}.
     📅 RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
     
-    #BuildWithAI #KWASU #GDGo_CKWASU`
-    const igMmessage = `🔥 I just created my BuildWithAI @gdgoc_kwasu KWASU DP! Check it out 👉 ${shareLink}.
+    #TechFest25 #KWASU #GDGo_CKWASU`
+    const igMmessage = `🔥 I just created my TechFest25 @gdgoc_kwasu KWASU DP! Check it out 👉 ${shareLink}.
     RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
     
-    #BuildWithAI #KWASU #GDGo_CKWASU`
-    const xMessage = `🔥 I just created my BuildWithAI @gdgoC_Kwasu KWASU DP! Check it out 👉 ${shareLink}.
+    #TechFest25 #KWASU #GDGo_CKWASU`
+    const xMessage = `🔥 I just created my TechFest25 @gdgoC_Kwasu KWASU DP! Check it out 👉 ${shareLink}.
     RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
     
-    #BuildWithAI #KWASU #GDGo_CKWASU`
+    #TechFest25 #KWASU #GDGo_CKWASU`
 
 
     const handleCopy = () => {
@@ -40,7 +40,7 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
         if (navigator.share) {
             try {
                 await navigator.share({
-                    title: 'BuildWithAI KWASU DP',
+                    title: 'TechFest25 KWASU DP',
                     text: message,
                     url: shareLink,
                 })
@@ -57,7 +57,7 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
             {downloadUrl && (
                 <a
                     href={downloadUrl}
-                    download="buildwithai-dp.png"
+                    download="techfest25-dp.png"
                     className="inline-block px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition"
                 >
                     📥 Download My DP
@@ -117,7 +117,7 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
             <div className="text-center space-y-2">
                 <p className="text-sm text-gray-500 max-w-md mx-auto">
                     📸 To post on Instagram, please download and upload manually. Tag <strong>@gdg_kwasu</strong> and use
-                    <strong> #BuildWithAI</strong>, <strong>#KWASU</strong>.
+                    <strong> #TechFest25</strong>, <strong>#KWASU</strong>.
                 </p>
 
                 <button

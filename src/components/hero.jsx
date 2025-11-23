@@ -7,7 +7,7 @@ const Hero = () => {
                 This Is What <span className="text-red-600">Innovation</span> Looks Like 🚀
             </h1>
             <p className="mt-4 text-base sm:text-lg text-center text-gray-700 max-w-xl mx-auto leading-relaxed">
-                Create your official <strong>BuildWithAI KWASU 2025</strong> DP and showcase your place in the
+                Create your official <strong>TechFest25 KWASU</strong> DP and showcase your place in the
                 <span className="text-yellow-500 font-semibold"> GDG KWASU</span> tech revolution.
             </p>
             <p className="mt-2 text-sm sm:text-base text-center text-gray-500">

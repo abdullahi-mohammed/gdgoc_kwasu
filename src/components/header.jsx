@@ -41,7 +41,7 @@ export default function Header() {
                     <div className="container mx-auto px-4 py-3 flex space-x-6 justify-center text-sm sm:text-base font-medium">
                         <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
                         <Link to="/get-dp" className="text-gray-700 hover:text-blue-600 transition-colors">Get DP</Link>
-                        <Link to="/sponsors" className="text-gray-700 hover:text-blue-600 transition-colors">Sponsors</Link>
+                        {/* <Link to="/sponsors" className="text-gray-700 hover:text-blue-600 transition-colors">Sponsors</Link> */}
                     </div>
                 </div>
             </nav>
