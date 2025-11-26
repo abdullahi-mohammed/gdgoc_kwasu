@@ -47,10 +47,10 @@ const GetDp = () => {
             ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 
             // Frame cutout configuration
-            const CUTOUT_X = 520;
-            const CUTOUT_Y = 160;
-            const CUTOUT_WIDTH = 357;  // You must confirm this
-            const CUTOUT_HEIGHT = 353; // You must confirm this
+            const CUTOUT_X = 540;
+            const CUTOUT_Y = 220;
+            const CUTOUT_WIDTH = 310;  // You must confirm this
+            const CUTOUT_HEIGHT = 290; // You must confirm this
 
             // Resize user image proportionally to fit inside the cutout
             const imgWidth = userImage.width;
