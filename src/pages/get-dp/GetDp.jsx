@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 // import frameImg from '/buildwithaiframe.jpg' // adjust path as needed
-import frameImg from '../../assets/Subtract (2).png' // adjust path as needed
+import frameImg from '/techfest.png' // adjust path as needed
 import ShareButtons from '../../components/ShareButtons'
 
 const CANVAS_SIZE = 900 // square canvas
