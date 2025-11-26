@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-center space-x-6 mt-4 text-sm font-medium">
                 <a
-                    href="https://x.com/gdgoC_Kwasu"
+                    href="https://x.com/gdgoc_kwasu"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline"

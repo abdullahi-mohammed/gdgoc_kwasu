@@ -16,17 +16,17 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
 
     const shareLink = imageUrl || siteUrl // Prefer image URL if available
     const message = `🔥 I just created my TechFest25 KWASU DP! Check it out 👉 ${shareLink}.
-    📅 RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+    📅 RSVP for the TechFest25 KWASU event https://gdg.community.dev/e/m4hfy3/
     
-    #TechFest25 #KWASU #GDGo_CKWASU`
+    #techfest25 #gdgockwasu  #techfest25gdgockwasu`
     const igMmessage = `🔥 I just created my TechFest25 @gdgoc_kwasu KWASU DP! Check it out 👉 ${shareLink}.
-    RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+    RSVP for the TechFest25 KWASU event https://gdg.community.dev/e/m4hfy3/
     
-    #TechFest25 #KWASU #GDGo_CKWASU`
-    const xMessage = `🔥 I just created my TechFest25 @gdgoC_Kwasu KWASU DP! Check it out 👉 ${shareLink}.
-    RSVP for the Build With AI KWASU event https://gdg.community.dev/e/m4hfy3/
+    #techfest25 #gdgockwasu  #techfest25gdgockwasu`
+    const xMessage = `🔥 I just created my TechFest25 @gdgoc_kwasu KWASU DP! Check it out 👉 ${shareLink}.
+    RSVP for the TechFest25 KWASU event https://gdg.community.dev/e/m4hfy3/
     
-    #TechFest25 #KWASU #GDGo_CKWASU`
+    #techfest25 #gdgockwasu  #techfest25gdgockwasu`
 
 
     const handleCopy = () => {
@@ -117,7 +117,7 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
             <div className="text-center space-y-2">
                 <p className="text-sm text-gray-500 max-w-md mx-auto">
                     📸 To post on Instagram, please download and upload manually. Tag <strong>@gdg_kwasu</strong> and use
-                    <strong> #TechFest25</strong>, <strong>#KWASU</strong>.
+                    <strong> #techfest25</strong>, <strong>#gdgockwasu </strong>.
                 </p>
 
                 <button
@@ -129,7 +129,7 @@ const ShareButtons = ({ downloadUrl, imageUrl }) => {
             </div>
             {/* <p className="text-sm text-gray-500 max-w-md mx-auto">
                 📸 To post on Instagram, please download and upload manually. Tag <strong>@gdg_kwasu</strong> and use
-                <strong> #BuildWithAI</strong>, <strong>#KWASU</strong>.
+                <strong> #BuildWithAI</strong>, <strong>#gdgockwasu </strong>.
             </p> */}
         </div>
     )

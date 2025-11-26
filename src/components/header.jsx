@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -20,17 +20,17 @@ export default function Header() {
                         </h2>
 
                         <div className="flex items-center space-x-4">
-                            <a href="https://x.com/gdgoC_Kwasu" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <a href="https://x.com/gdgoc_kwasu" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                                 <FaXTwitter className="w-5 h-5 text-gray-600 hover:text-blue-600 transition-transform duration-200 hover:scale-110" />
                             </a>
                             <a href="https://www.instagram.com/gdgoc_kwasu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <FaInstagram className="w-5 h-5 text-gray-600 hover:text-pink-500 transition-transform duration-200 hover:scale-110" />
                             </a>
-                            <a href="https://wa.me/yourwhatsapplink" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <a href="https://chat.whatsapp.com/FYgQ4yHtiWR1wh6BP62GnM" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                                 <FaWhatsapp className="w-5 h-5 text-gray-600 hover:text-green-600 transition-transform duration-200 hover:scale-110" />
                             </a>
-                            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <AiOutlineLinkedin className="w-5 h-5 text-gray-600 hover:text-blue-700 transition-transform duration-200 hover:scale-110" />
+                            <a href="https://www.youtube.com/@gdgoc_kwasu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <FaYoutube className="w-5 h-5 text-gray-600 hover:text-blue-700 transition-transform duration-200 hover:scale-110" />
                             </a>
                         </div>
                     </div>
