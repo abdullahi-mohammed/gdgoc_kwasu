@@ -50,7 +50,7 @@ const GetDp = () => {
             const CUTOUT_X = 540;
             const CUTOUT_Y = 220;
             const CUTOUT_WIDTH = 310;  // You must confirm this
-            const CUTOUT_HEIGHT = 290; // You must confirm this
+            const CUTOUT_HEIGHT = 300; // You must confirm this
 
             // Resize user image proportionally to fit inside the cutout
             const imgWidth = userImage.width;
